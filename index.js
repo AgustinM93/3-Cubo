@@ -44,18 +44,24 @@ const vertexColors = [
 
 const indices = [
   // cara izq
-  0,3,4,
+  0,3,
+  0,4,
+  4,3,
   //cara atras
-  3,2,4,
+  2,3,
+  3,4,
+  4,2,
   //cara derecha
-  1,2,4,
+  1,2,
+  1,4,
+  4,2,
   // cara de arriba
-  0, 1, 2,
-  0, 3, 2,
-  //cara derecha
-  1,2,4,
+
+
   // cara frente
-  0,1,4,
+  0,1,
+  0,4,
+  4,1,
   
 ]
 
@@ -103,4 +109,4 @@ magic(gl, program, canvas)
 gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
 
 // Y dibujamos 🎨
-gl.drawElements(gl.TRIANGLES, indices.length, gl.UNSIGNED_SHORT, 0)
+gl.drawElements(gl.LINES, indices.length, gl.UNSIGNED_SHORT, 0)
