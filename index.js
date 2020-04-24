@@ -30,42 +30,33 @@ const vertexPositions = [
   1, 1, 1,    // 1
   1, 1, -1,   // 2
   -1, 1, -1,  // 3
-  -1, -1, 1,  // 4
-  1, -1, 1,   // 5
-  1, -1, -1,  // 6
-  -1, -1, -1  // 7
+  0, -1, 0,  // 4
 ]
 
 const vertexColors = [
-  1, 0, 1,    // 0 👈 indice de cada color
+  1, 1, 0,    // 0 👈 indice de cada color
   1, 1, 1,    // 1
-  0, 1, 1,    // 2
-  0, 0, 1,    // 3
+  0, 0, 1,    // 2
+  0, 1, 1,    // 3
   1, 0, 0,    // 4
-  1, 1, 0,    // 5
-  0, 1, 0,    // 6
-  0, 0, 0     // 7
+
 ]
 
 const indices = [
+  // cara izq
+  0,3,4,
+  //cara atras
+  3,2,4,
+  //cara derecha
+  1,2,4,
   // cara de arriba
-  0, 1, 3,
-  3, 1, 2,
-  // abajo
-  7, 5, 4,
-  5, 7, 6,
-  // izquierda
-  3, 4, 0,
-  3, 7, 4,
-  // derecha
-  5, 2, 1,
-  5, 6, 2,
-  // adelante
-  4, 1, 0,
-  4, 5, 1,
-  // atrás
-  6, 3, 2,
-  6, 7, 3,
+  0, 1, 2,
+  0, 3, 2,
+  //cara derecha
+  1,2,4,
+  // cara frente
+  0,1,4,
+  
 ]
 
 /* 📝 Cada cara esta formada por dos triángulos, donde sus indices siguen la convención de sentido
