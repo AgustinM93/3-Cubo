@@ -119,8 +119,8 @@ export function magic(gl, program, canvas) {
   const viewMatrix = mat4.create()
   const projectionMatrix = mat4.create()
 
-  const eye = [3, 3, 5]
-  const center = [0, 0, 0]
+  const eye = [4, 4, 9]
+  const center = [0, -1, 3]
   const up = [0, 1, 0]
   mat4.lookAt(viewMatrix, eye, center, up)
 

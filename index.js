@@ -26,14 +26,44 @@ const vertexColorLocation = gl.getAttribLocation(program, 'vertexColor')
 // #️⃣ Definimos la info de la geometría que vamos a dibujar (un cubo)
 
 const vertexPositions = [
-  -1, 1, 1,   // 0 👈 indice de cada posición
-  1, 1, 1,    // 1
-  1, 1, -1,   // 2
-  -1, 1, -1,  // 3
-  0, -1, 0,  // 4
+  -0.14,-1.702,5.936,
+  -0.14,-1.489,6.031,
+  0,-2.115,6.089,
+  0.14,-1.702,5.936,
+  0,-1.794,6.45,
+  -0.14,0.926,0.609,
+  -0.14,0.713,0.514,
+  0,0.482,3.66,
+  0.14,-1.489,6.031,
+  0,-2.025,6.347,
+  -0.14,0.661,3.74,
+  0,1.033,0.103,
+  -0.14,1.858,4.274,
+  0.14,1.858,4.274,
+  0.14,0.713,0.514,
+  0,0.55,0.105,
+  0,2.115,4.387,
+  0,0.802,0,
+  0.14,0.661,3.74,
+  0.14,0.926,0.609
 ]
 
 const vertexColors = [
+  1, 1, 0,    // 0 👈 indice de cada color
+  1, 1, 1,    // 1
+  0, 0, 1,    // 2
+  0, 1, 1,    // 3
+  1, 0, 0,    // 4
+  1, 1, 0,    // 0 👈 indice de cada color
+  1, 1, 1,    // 1
+  0, 0, 1,    // 2
+  0, 1, 1,    // 3
+  1, 0, 0,    // 4
+  1, 1, 0,    // 0 👈 indice de cada color
+  1, 1, 1,    // 1
+  0, 0, 1,    // 2
+  0, 1, 1,    // 3
+  1, 0, 0,    // 4
   1, 1, 0,    // 0 👈 indice de cada color
   1, 1, 1,    // 1
   0, 0, 1,    // 2
@@ -43,25 +73,42 @@ const vertexColors = [
 ]
 
 const indices = [
-  // cara izq
-  0,3,
-  0,4,
-  4,3,
-  //cara atras
-  2,3,
-  3,4,
-  4,2,
-  //cara derecha
-  1,2,
-  1,4,
-  4,2,
-  // cara de arriba
-
-
-  // cara frente
-  0,1,
-  0,4,
-  4,1,
+12 	,10 ,1,
+2 ,	3 ,	9,
+3, 	18, 	8,
+12, 	5, 	10,
+6 ,	10, 	5,
+0, 	1, 	10,
+14, 	15, 	17,
+7, 	18, 	3,
+15, 	6, 	17,
+9, 	4, 	0,
+9, 	0, 	2,
+15, 	7, 	6,
+9, 	3, 	4,
+8, 	13, 	16,
+7, 	3, 	2,
+8, 	4, 	3,
+10, 	6, 	7,
+5, 	12, 	16,
+11, 	19, 	14,
+14, 	7, 	15,
+0, 	10, 	7,
+13, 	8, 	18,
+19, 	13, 	18,
+16, 	1, 	4,
+4, 	8, 	16,
+1, 	16, 	12,
+18, 	7, 	14,
+11, 	17, 	6,
+11, 	5, 	16,
+16, 	13, 	19,
+0, 	7, 	2,
+11, 	6, 	5,
+1, 	0, 	4,
+16, 	19, 	11,
+17, 	11, 	14,
+18, 	14, 	19
   
 ]
 
@@ -109,4 +156,4 @@ magic(gl, program, canvas)
 gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
 
 // Y dibujamos 🎨
-gl.drawElements(gl.LINES, indices.length, gl.UNSIGNED_SHORT, 0)
+gl.drawElements(gl.TRIANGLES, indices.length, gl.UNSIGNED_SHORT, 0)
